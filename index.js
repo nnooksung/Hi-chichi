@@ -8,6 +8,7 @@ const typeDefs = `
 	type Query {
 		hello(name: String): String!
 		sayhi: String!
+		continue: String!
 	}
 
 	type Mutation {
@@ -26,7 +27,8 @@ const resolvers = {
 				name = defaultName;
 			return `Hello purple world, my name is ${name}!`;
 		},
-		sayhi: () => "Hello purple world, my name is"
+		sayhi: () => "Hello purple world, my name is",
+		continue:() => "This is the second time studied with you, You are the greatest teacher!"
 	},
 	Mutation: {
 		changeDefaultName: (root, { name }, ctx, info) => {
